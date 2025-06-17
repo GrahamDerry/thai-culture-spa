@@ -1,0 +1,6 @@
+# macOS noise
+.DS_Store
+# dependency folders
+node_modules
+# env/secret files
+.env

@@ -1,0 +1,23 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.vocab-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+.vocab-table thead th {
+  background: #dbe8f9;
+  padding: 8px;
+  border: 1px solid #999;
+  text-align: center;
+}
+.vocab-table td {
+  border: 1px solid #999;
+  padding: 6px 8px;
+}
+.vocab-table td:first-child {
+  text-align: center;
+}
