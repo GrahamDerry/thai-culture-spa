@@ -1,6 +1,4 @@
 import { vocabList } from "../data/vocab"; // remove if you hard-code rows
-import "./ThaiVocabTable.css"; // optional: own CSS file
-// or just rely on global styles.css
 
 function ThaiVocabTable() {
   return (
