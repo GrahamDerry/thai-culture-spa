@@ -1,63 +1,50 @@
 @import './_variables.css';
 
 .directions {
+  --banner-bg: #d5e1f6;
   position: relative;
-  display: block;
-  align-items: center;
+  display: inline-block;
   min-height: 38px;
-  padding: 12px 28px 12px 0; /* top/right/bottom/left */
-  background: #c1cada;
-  border: 2px solid #0f2c6d;
+  padding: 0.75rem 3.5rem 0.75rem 1.25rem;
+  background: var(--banner-bg);
   color: #000;
   font-family: "TH Sarabun New", "Tahoma", sans-serif;
   font-weight: bold;
   font-size: 22px;
-  border-radius: var(--radius-l);
+  border-radius: 0.25rem 0 0 0.25rem;
   margin: var(--space-l) 0;
   box-sizing: border-box;
   overflow: visible;
-  max-width: 100%;
   margin-left: 0;
   text-align: left;
+  border: none;
 }
 
-.directions__arrow {
+.directions::after {
+  content: "";
   position: absolute;
-  right: -28px; /* Arrow width */
   top: 0;
-  width: 28px;
+  right: -2.25rem;
+  width: 2.25rem;
   height: 100%;
-  display: flex;
-  align-items: center;
-  pointer-events: none;
+  background: var(--banner-bg);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
-.directions__arrow-shape {
-  width: 28px;
-  height: 38px;
-  display: block;
-}
+/* Remove SVG arrow and related classes */
+/* .directions__arrow, .directions__arrow-shape, .directions__arrow-shape polygon { display: none; } */
 
-.directions__arrow-shape polygon {
-  fill: #c1cada;
-  stroke: #0f2c6d;
-  stroke-width: 2;
-}
-
-.directions.step-1 { background: var(--blue); }
-.directions.step-2 { background: var(--blue-dark); }
+.directions.step-1 { background: var(--banner-bg); }
+.directions.step-2 { background: var(--banner-bg); }
 
 @media (max-width: 600px) {
   .directions {
     font-size: 16px;
-    padding: 8px 18px 8px 12px;
+    padding: 0.5rem 2.25rem 0.5rem 0.75rem;
     min-height: 28px;
   }
-  .directions__arrow {
-    right: -20px;
-  }
-  .directions__arrow-shape {
-    width: 20px;
-    height: 28px;
+  .directions::after {
+    right: -1.5rem;
+    width: 1.5rem;
   }
 } 
