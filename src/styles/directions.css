@@ -1,0 +1,63 @@
+@import './_variables.css';
+
+.directions {
+  position: relative;
+  display: block;
+  align-items: center;
+  min-height: 38px;
+  padding: 12px 28px 12px 0; /* top/right/bottom/left */
+  background: #c1cada;
+  border: 2px solid #0f2c6d;
+  color: #000;
+  font-family: "TH Sarabun New", "Tahoma", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: var(--radius-l);
+  margin: var(--space-l) 0;
+  box-sizing: border-box;
+  overflow: visible;
+  max-width: 100%;
+  margin-left: 0;
+  text-align: left;
+}
+
+.directions__arrow {
+  position: absolute;
+  right: -28px; /* Arrow width */
+  top: 0;
+  width: 28px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.directions__arrow-shape {
+  width: 28px;
+  height: 38px;
+  display: block;
+}
+
+.directions__arrow-shape polygon {
+  fill: #c1cada;
+  stroke: #0f2c6d;
+  stroke-width: 2;
+}
+
+.directions.step-1 { background: var(--blue); }
+.directions.step-2 { background: var(--blue-dark); }
+
+@media (max-width: 600px) {
+  .directions {
+    font-size: 16px;
+    padding: 8px 18px 8px 12px;
+    min-height: 28px;
+  }
+  .directions__arrow {
+    right: -20px;
+  }
+  .directions__arrow-shape {
+    width: 20px;
+    height: 28px;
+  }
+} 
